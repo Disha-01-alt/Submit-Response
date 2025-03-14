@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Data Collection</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        form { max-width: 600px; margin: auto; }
-        label { display: block; margin-top: 1rem; }
-        input, select, textarea { width: 100%; padding: 0.5rem; margin-top: 0.3rem; }
-        button { margin-top: 1rem; padding: 0.7rem; background-color: #5085a5; color: white; border: none; cursor: pointer; }
-        button:hover { background-color: #407092; }
-    </style>
+    <title>Student Career Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Student Data Collection Form</h1>
+    <h1>Your Career Choices</h1>
+    <p>Dear students, please fill out this form honestly and share your career choices to help us support you better.</p>
 
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul>
-                {% for msg in messages %}
-                    <li>{{ msg }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-
-    <form action="{{ url_for('submit') }}" method="post">
-        <label for="student_name">Student Name:</label>
-        <input type="text" id="student_name" name="student_name" required>
+    <form action="#" method="post">
+        <label for="district">District:</label>
+        <select id="district" name="district" required></select>
 
         <label for="school">School Name:</label>
-        <select id="school" name="school" required>
-            <option value="">Select School</option>
-            <option value="School A">School A</option>
-            <option value="School B">School B</option>
-            <option value="School C">School C</option>
-            <option value="Other">Other</option>
-        </select>
+        <select id="school" name="school" required></select>
+
+        <label for="email">Email ID (if available):</label>
+        <input type="email" id="email" name="email">
+
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
 
         <label for="student_id">Student ID:</label>
         <input type="text" id="student_id" name="student_id" required>
@@ -46,13 +30,7 @@
         <input type="tel" id="mobile" name="mobile" required>
 
         <label for="class">Class:</label>
-        <select id="class" name="class" required>
-            <option value="">Select Class</option>
-            <option value="9th">9th</option>
-            <option value="10th">10th</option>
-            <option value="11th">11th</option>
-            <option value="12th">12th</option>
-        </select>
+        <select id="class" name="class" required></select>
 
         <label for="percentage">Your Percentage in 10th Class:</label>
         <select id="percentage" name="percentage" required>
@@ -63,45 +41,47 @@
             <option value="90% and above">90% and above</option>
         </select>
 
-        <label for="stream">Your Stream:</label>
-        <select id="stream" name="stream" required>
-            <option value="Arts with Vocational">Arts with Vocational</option>
-            <option value="Arts without Vocational">Arts without Vocational</option>
-            <option value="Commerce with Maths">Commerce with Maths</option>
-            <option value="Commerce without Maths">Commerce without Maths</option>
-            <option value="PCM- Science with Maths">PCM- Science with Maths</option>
-            <option value="PCB- Science with Bio">PCB- Science with Bio</option>
-            <option value="PCMB- Science with both Bio and Maths">PCMB- Science with both Bio and Maths</option>
-        </select>
+        <label for="stream">Stream:</label>
+        <select id="stream" name="stream" required></select>
 
-        <label for="career_choice">Your 1st Career Choice:</label>
-        <input type="text" id="career_choice" name="career_choice" required>
-
-        <label for="career_industry">Industry of Your 1st Career Choice:</label>
-        <select id="career_industry" name="career_industry" required>
+        <label for="industry">Industry of Your 1st Career Choice:</label>
+        <select id="industry" name="industry">
             <option value="">Select Industry</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Medical">Medical</option>
-            <option value="IT & Software">IT & Software</option>
-            <option value="Finance & Banking">Finance & Banking</option>
-            <option value="Education">Education</option>
-            <option value="Other">Other</option>
         </select>
+        
+        <label for="career">Your 1st Career Choice:</label>
+        <select id="career" name="career">
+            <option value="">Select Career</option>
+        </select>        
 
-        <label for="career_sureness">How Sure Are You About This Career Choice?</label>
+        <label for="career_other">If "Other", please specify:</label>
+        <input type="text" id="career_other" name="career_other">
+
+        <label for="career_sureness">How sure are you about this career choice?</label>
         <select id="career_sureness" name="career_sureness" required>
-            <option value="I am very sure">I am very sure. I want to be in this career.</option>
-            <option value="I am confused">I am confused between 2-3 careers.</option>
-            <option value="I am yet to decide">I am yet to decide my career, but I am interested in this career.</option>
+            <option value="very_sure">I am very sure. I want to be in this career.</option>
+            <option value="confused">I am confused between 2-3 careers.</option>
+            <option value="not_decided">I am yet to decide but I am interested.</option>
         </select>
 
-        <label for="plan_b">Do You Have a Second Career Choice/ Plan B?</label>
+        <label>Select 2 types of Courses/Institutes after 12th:</label>
+        <div class="custom-multiselect" id="courses_container"></div>
+
+        <label for="study_time">How much time can you give to prepare?</label>
+        <select id="study_time" name="study_time" required></select>
+
+        <label for="plan_b">Do you have a second career choice/Plan B?</label>
         <select id="plan_b" name="plan_b" required>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select>
 
+        <label>What support do you need?</label>
+    <div class="custom-multiselect" id="support_container"></div>
+
         <button type="submit">Submit</button>
     </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
