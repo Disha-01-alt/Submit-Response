@@ -1,0 +1,66 @@
+{
+    "districts": {
+        "Bhopal": ["ABC School", "XYZ Public School", "PQR International"],
+        "Indore": ["Indore Academy", "Global High School", "Bright Future School"],
+        "Jabalpur": ["School G", "School H", "School I"]
+    },
+    "classes": ["9th", "10th", "11th", "12th"],
+    "streams": [
+        "Arts with Vocational",
+        "Arts without Vocational",
+        "Commerce with Maths",
+        "Commerce without Maths",
+        "PCM- Science with Maths",
+        "PCB- Science with Bio",
+        "PCMB- Science with both Bio and Maths"
+    ],
+    "industries": {
+        "Business Functions": ["Consultant", "HR Manager", "Marketing Executive", "Communications Specialist", "Operations Manager"],
+        "Legal": ["Lawyer", "Judge (Supreme Court)", "Judge (High Court)", "Judge (District Court)", "Magistrate"],
+        "Logistics": ["Logistics Manager", "Supply Chain Executive", "Warehouse Coordinator"],
+        "Fitness and Sports": ["Athlete", "Fitness Trainer", "Sports Coach"],
+        "Art and Design": ["Graphic Designer", "Illustrator", "Animator", "Interior Designer"],
+        "Beauty and Wellness": ["Parlour Owner", "Hair Stylist", "Nail Artist", "Makeup Artist"],
+        "Travel & Tourism": ["Tour Guide", "Travel Agent", "Hotel Manager"],
+        "Education": ["Teacher", "Professor", "Educational Consultant"],
+        "Banking and Finance": ["Chartered Accountant", "Financial Analyst", "Investment Banker"],
+        "Fashion": ["Fashion Designer", "Stylist", "Textile Designer"],
+        "Healthcare or Medical": ["Doctor", "Nurse", "Pharmacist", "Lab Technician"],
+        "IT and Software": ["Software Engineer", "Web Developer", "Cybersecurity Specialist", "Data Scientist"],
+        "Media Journalism": ["Journalist", "News Anchor", "Content Writer", "Photojournalist"],
+        "Hospitality and Aviation": ["Hotel Manager", "Flight Attendant", "Pilot"],
+        "Public Service": ["UPSC Officer", "SSC Officer", "Railway Officer", "NGO Worker", "Social Sector Professional"],
+        "Police and Defence": ["Army Officer", "Navy Officer", "Air Force Officer", "Police Officer"],
+        "Performing Arts": ["Dancer", "Singer", "Musician", "Actor"],
+        "Agriculture + Food Processing": ["Farmer", "Food Scientist", "Agricultural Consultant"],
+        "Self Employment/Entrepreneurship": ["Entrepreneur", "Startup Founder", "Small Business Owner"],
+        "Handskills": ["Welder", "Mechanic", "Automobile Technician", "Electrician", "AC or Fridge Repair Technician"],
+        "Others": []
+    },
+    "courses": [
+        "Degree from a Regular Private College",
+        "Degree from a Regular Government College",
+        "Degree from an Open College",
+        "Diploma Courses",
+        "Vocational Training/Skill Development Course",
+        "Professional Certificate/Specialisation Courses",
+        "Prepare for competitive exams",
+        "I want to do a job after school",
+        "Other"
+    ],
+    "study_time": [
+        "0-6 Months", "6-12 Months", "1-3 Years", "More than 3 years", 
+        "I want to do a job after school", "Other"
+    ],
+    "support_options": [
+        "Preparation for competitive exam",
+        "Talking to a professional",
+        "Individual conversations with EVGC/Teacher Counsellor",
+        "Convincing my parents",
+        "Sharing information about exams",
+        "Finding friends with similar choices",
+        "I need a mentor to motivate me",
+        "Other"
+    ]
+}
+
